@@ -1,18 +1,18 @@
-package com.chao.Utils;
+package com.chao.utils;
 
 import org.junit.Test;
 
 import java.io.IOException;
 import java.util.Map;
 
-public class UtilText {
+public class UtilTest {
     @Test
     public void test() {
         String t;
         String a;
         try {
-            t = FileUtil.readFile("D:\\桌面\\java_text\\orig.txt");
-            a = FileUtil.readFile("D:\\桌面\\java_text\\orig_0.8_add.txt");
+            t = FileUtil.readFile("src/main/resources/orig.txt");
+            a = FileUtil.readFile("src/main/resources/orig_0.8_add.txt");
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

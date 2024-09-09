@@ -1,4 +1,4 @@
-package com.chao.Utils;
+package com.chao.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -6,7 +6,6 @@ import org.wltea.analyzer.core.IKSegmenter;
 import org.wltea.analyzer.core.Lexeme;
 
 
-import java.io.IOException;
 import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,7 +35,6 @@ public class IKUtil {
         } catch (Exception e) {
             System.out.println("error");
             log.error(e.getMessage(), e);
-
         }
         return map;
     }

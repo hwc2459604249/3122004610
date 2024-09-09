@@ -1,4 +1,4 @@
-package com.chao.Utils;
+package com.chao.utils;
 
 import org.junit.Test;
 

@@ -1,9 +1,6 @@
 package com.chao.utils;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 
 public class FileUtil {
     //读取文件内容转化为字符串
@@ -32,7 +29,7 @@ public class FileUtil {
             }
         }
         //开启追加模式
-        try (FileOutputStream fos = new FileOutputStream(file, true)) {
+        try (BufferedOutputStream fos = new BufferedOutputStream(new FileOutputStream(filePath, true))) {
             fos.write(content.getBytes());
             fos.flush();
         }

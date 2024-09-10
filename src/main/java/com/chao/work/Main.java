@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         if (args.length == 3) {
             double make = make(args);
-            System.out.println(make);
+            System.out.println("make: "+make);
         }
 
 

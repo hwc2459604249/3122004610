@@ -1,13 +1,14 @@
 package com.chao.utils;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 public class FileUtil {
     //读取文件内容转化为字符串
     public static String readFile(String filePath) throws IOException {
         try (FileInputStream fis = new FileInputStream(filePath)) {
             byte[] bytes = fis.readAllBytes();
-            return new String(bytes);
+            return new String(bytes, StandardCharsets.UTF_8);
         }
     }
 

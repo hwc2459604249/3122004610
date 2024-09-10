@@ -30,7 +30,7 @@ public class FileUtil {
             }
         }
         //开启追加模式
-        try (BufferedOutputStream fos = new BufferedOutputStream(new FileOutputStream(filePath, true))) {
+        try (FileOutputStream fos = new FileOutputStream(file, true)) {
             fos.write(content.getBytes());
             fos.flush();
         }

@@ -30,9 +30,9 @@ public class FileUtil {
             }
         }
         //开启追加模式
-        try (FileOutputStream fos = new FileOutputStream(file, true)) {
-            fos.write(content.getBytes());
-            fos.flush();
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(file,StandardCharsets.UTF_8,true))) {
+            bw.write(content);
+            bw.flush();
         }
     }
 }
